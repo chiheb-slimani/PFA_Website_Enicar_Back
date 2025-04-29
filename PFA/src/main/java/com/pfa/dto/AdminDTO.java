@@ -1,14 +1,11 @@
 package com.pfa.dto;
 
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 import lombok.Data;
 
 @Data
 public class AdminDTO {
-     @NotBlank @Size(min=8, max=8)
+     @NotNull  @Min(10000000) @Max(99999999)
     private int numero;
 
     @NotBlank
