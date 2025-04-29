@@ -6,14 +6,9 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "admin")
+@Table(name = "enseignant")
 @PrimaryKeyJoinColumn(name = "id")
 @Data
-public class Admin extends Utilisateur {
-
-    private int numero;
-    private String nom;
-    private String prenom;
-    private String email;
-    private String motDePasse;
+public class Enseignant extends Utilisateur {
+    private String filiere;
 }

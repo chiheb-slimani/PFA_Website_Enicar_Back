@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "PFA_Enicar_Backend",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

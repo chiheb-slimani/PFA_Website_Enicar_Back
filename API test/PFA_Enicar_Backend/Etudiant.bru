@@ -1,0 +1,31 @@
+meta {
+  name: Etudiant
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/etudiants
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/jjson
+}
+
+body:json {
+  {
+    "name": "Étudiant Test",
+    "email": "etudiant@enicar.ma",
+    "password": "secret123"
+  }
+}
+
+tests {
+  test {
+    assert: response.status == 201
+    assert: body.id exists
+    assert: body.email == "etudiant@enicar.ma"
+  }
+}
